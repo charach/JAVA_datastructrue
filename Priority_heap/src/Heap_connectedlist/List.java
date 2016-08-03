@@ -1,13 +1,13 @@
 package Heap_connectedlist;
 
-public class Heap {
+public class List {
 	Item first;
 
-	Heap() {
+	List() {
 
 	}
 
-	Heap(Item first) {
+	List(Item first) {
 		this.first = first;
 	}
 
