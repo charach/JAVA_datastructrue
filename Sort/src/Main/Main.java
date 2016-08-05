@@ -3,7 +3,7 @@ package Main;
 public class Main {
 	
 	public static void main(String[] args) {
-		int ary[] = new int[10];
+		int ary[] = new int[10000];
 		
 		initary(ary);
 		SelectSort.sort(ary);
@@ -29,13 +29,23 @@ public class Main {
 		
 		
 		initary(ary);
+		QuickSort.sort(ary, 0, ary.length-1);
+		System.out.println("Quick Sort : "+checkary(ary));
+		
+		initary(ary);
+		RadixSort.sort(ary);
+		System.out.println("RadixSort : "+checkary(ary));
+		
+		initary(ary);
+		BucketSort.sort(ary);
+		System.out.println("BucketSort : "+checkary(ary));
 		
 	}
 
 	
 	public static void initary(int[] ary){
 		for(int i=0;i<ary.length;i++){
-			ary[i] = (int)(Math.random()*100+1);
+			ary[i] = (int)(Math.random()*100);
 		}
 	}
 	public static boolean checkary(int[] ary){
@@ -46,4 +56,6 @@ public class Main {
 		}
 		return true;
 	}
+
+
 }
