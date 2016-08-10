@@ -69,7 +69,6 @@ public class GraphLinkedList implements Graph {
 			return null;
 		}
 		for (int i = 0; i < linkedlist[vertex].size(); i++) {
-
 			al.add(linkedlist[vertex].get(i));
 		}
 		return al;

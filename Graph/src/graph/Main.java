@@ -26,14 +26,7 @@ public class Main {
 		ga.insertEdge(3, 0);
 		ga.insertEdge(3, 2);
 
-		ArrayList al = new ArrayList();
 		
-		
-		al = ga.adjacent(3);
-		Iterator at = al.iterator();
-		while(at.hasNext()){
-			System.out.println("3 adjecent : "+at.next());
-		}
 		
 		gll.insertVertex(0);
 		gll.insertVertex(1);
@@ -46,23 +39,20 @@ public class Main {
 		gll.insertEdge(1, 2);
 		gll.insertEdge(2, 0);
 		gll.insertEdge(2, 1);
-		gll.insertEdge(2, 2);
 		gll.insertEdge(2, 3);
 		gll.insertEdge(3, 0);
 		gll.insertEdge(3, 2);
 
-		al = new ArrayList();
+		Dfs dfs = new Dfs(gll);
 		
+		dfs = new Dfs(ga);
+	
 		
-		al = gll.adjacent(3);
-		at = al.iterator();
-		while(at.hasNext()){
-			System.out.println("3 adjecent : "+at.next());
-		}
+		Bfs bfs = new Bfs(gll);
+		bfs.search(2);
 		
-		
-		gll.deleteEdge(3, 0);
-		
-		}
+		bfs.changegraph(ga);
+		bfs.search(1);
+	}
 
 }
